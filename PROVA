@@ -27,7 +27,6 @@ var
     mediaPrecos: real
     posMaiorPreco: inteiro
 
-
 inicio
     totalCarros <- 0
     totalCompras <- 0
@@ -45,7 +44,7 @@ inicio
         leia(opcao)
 
         escolha opcao
-            cadastro 1:
+            opcao 1
                 // Cadastro de Carro
                 se totalCarros < 100 entao
                     totalCarros <- totalCarros + 1
@@ -68,7 +67,7 @@ inicio
                 senao
                     escreval("Limite de carros cadastrados atingido.")
                 fimse
-            cadastro 2:
+            opcao 2
                 // Cadastro de Cliente
                 escreva("Nome do Cliente: ")
                 leia(clienteNome)
@@ -84,7 +83,7 @@ inicio
                     escreva("Email inválido. Digite novamente: ")
                     leia(clienteEmail)
                 fimenquanto
-            cadastro 3:
+            opcao 3
                 // Registro de Compra
                 escreval("=== Registro de Compra ===")
                 escreval("Carros disponíveis:")
@@ -113,7 +112,7 @@ inicio
                     escreva("Digite o número do próximo carro (0 para finalizar): ")
                     leia(i)
                 fimenquanto
-            cadastro 4:
+            opcao 4
                 // Geração de Relatório Final
                 escreval("=== Relatório Final ===")
                 precoTotal <- 0
@@ -163,11 +162,11 @@ inicio
                 escreval("Valor Final a Pagar: R$ ", valorFinal)
                 escreval("Carro Mais Caro Comprado: ", modelos[posMaiorPreco], " - R$ ", maiorPreco)
                 escreval("Média de Preços dos Carros Comprados: R$ ", mediaPrecos)
-            cadastro 5:
+            opcao 5
                 escreval("Encerrando o sistema...")
-            senao
+            outrocaso
                 escreval("Opção inválida.")
         fimescolha
     ate opcao = 5
-
-Fimalgoritmo
+    
+fimalgoritmo
